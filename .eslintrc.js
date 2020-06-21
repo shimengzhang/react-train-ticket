@@ -9,6 +9,8 @@ module.exports = {
   extends: [
     'airbnb-base'
   ],
+  "plugins": ["react-hooks"],
+  "parser": "babel-eslint",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -16,6 +18,7 @@ module.exports = {
     },
   },
   rules: {
+    "react-hooks/rules-of-hooks": "error",
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-plusplus': 0,
@@ -33,6 +36,8 @@ module.exports = {
     'no-prototype-builtins': 0,
     'class-methods-use-this': 0,
     'no-underscore-dangle': 0,
-    'no-useless-constructor': 0
+    'no-useless-constructor': 0,
+    'max-classes-per-file': 0,
+    'no-shadow':0
   },
 };
